@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3137,         93]
-NotebookOptionsPosition[      2778,         79]
-NotebookOutlinePosition[      3184,         95]
-CellTagsIndexPosition[      3141,         92]
+NotebookDataLength[      3879,        110]
+NotebookOptionsPosition[      3520,         96]
+NotebookOutlinePosition[      3926,        112]
+CellTagsIndexPosition[      3883,        109]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -70,11 +70,28 @@ Cell[BoxData[
             RowBox[{"series", "[", 
              RowBox[{"[", 
               RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ";", 
-           RowBox[{"numberVoltage", "++"}]}]}], "]"}]}]}], "]"}], 
-     ";"}]}]}]}]], "Input",
+           RowBox[{"numberVoltage", "++"}]}]}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"numberVoltage", " ", ">", " ", "0"}], ",", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"newSeries", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<voltage\>\"", ",", "sumVoltage"}], "}"}]}], "]"}]}], 
+      "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"numberResistors", " ", ">", " ", "0"}], ",", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"newSeries", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<resistor\>\"", ",", "sumResistor"}], "}"}]}], "]"}]}], 
+      "]"}], ";", "\[IndentingNewLine]", "newSeries"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{{3.85819132106357*^9, 3.8581913214939623`*^9}, {
-  3.8581913523872232`*^9, 
-  3.858191378546092*^9}},ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-\
+  3.8581913523872232`*^9, 3.858191378546092*^9}, {3.8581914664343386`*^9, 
+  3.8581914676793528`*^9}},ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-\
 609d84d9176e"]
 },
 WindowSize->{1440., 777.75},
@@ -94,7 +111,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2216, 57, 181, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"]
+Cell[558, 20, 2958, 74, 238, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"]
 }
 ]
 *)
