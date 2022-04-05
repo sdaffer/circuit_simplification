@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5139,        140]
-NotebookOptionsPosition[      4593,        124]
-NotebookOutlinePosition[      4999,        140]
-CellTagsIndexPosition[      4956,        137]
+NotebookDataLength[      6490,        177]
+NotebookOptionsPosition[      5943,        161]
+NotebookOutlinePosition[      6349,        177]
+CellTagsIndexPosition[      6306,        174]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -112,9 +112,46 @@ Cell[BoxData[
      "\[IndentingNewLine]", 
      RowBox[{"sumCurrent", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
      RowBox[{"newParallel", " ", "=", " ", 
-      RowBox[{"{", "}"}]}], ";"}]}]}]}]], "Input",
- CellChangeTimes->{{3.858191556358753*^9, 
-  3.8581915566139593`*^9}},ExpressionUUID->"66f8b857-2f8d-4ea4-a433-\
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{"i", "<=", 
+        RowBox[{"Length", "[", "parallel", "]"}]}], ",", 
+       RowBox[{"i", "++"}], ",", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"parallel", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", 
+           "\"\<resistor\>\""}], ",", " ", 
+          RowBox[{
+           RowBox[{"sumResistor", " ", "+=", " ", 
+            RowBox[{"1", "/", 
+             RowBox[{"parallel", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", ",", "2"}], "]"}], "]"}]}]}], ";", 
+           RowBox[{"numberResistors", "++"}]}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"parallel", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", "\"\<current\>\""}],
+           ",", " ", 
+          RowBox[{
+           RowBox[{"sumCurrent", " ", "+=", " ", 
+            RowBox[{"parallel", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ";", 
+           RowBox[{"numberCurrent", "++"}]}]}], "]"}]}]}], "]"}], 
+     ";"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.858191556358753*^9, 3.8581915566139593`*^9}, {
+  3.8581915957368326`*^9, 
+  3.8581915958774476`*^9}},ExpressionUUID->"66f8b857-2f8d-4ea4-a433-\
 d062c42073a6"],
 
 Cell[BoxData[""], "Input",
@@ -140,8 +177,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 2979, 74, 238, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
-Cell[3540, 96, 918, 21, 124, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
-Cell[4461, 119, 128, 3, 28, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"]
+Cell[3540, 96, 2268, 58, 181, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
+Cell[5811, 156, 128, 3, 28, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"]
 }
 ]
 *)
