@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4577,        127]
-NotebookOptionsPosition[      4125,        112]
-NotebookOutlinePosition[      4531,        128]
-CellTagsIndexPosition[      4488,        125]
+NotebookDataLength[      5139,        140]
+NotebookOptionsPosition[      4593,        124]
+NotebookOutlinePosition[      4999,        140]
+CellTagsIndexPosition[      4956,        137]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -107,8 +107,20 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"numberResistors", " ", "=", " ", "0"}], ";", 
      "\[IndentingNewLine]", 
-     RowBox[{"sumResistor", " ", "=", " ", "0"}], ";"}]}]}]}]], "Input",Expres\
-sionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"]
+     RowBox[{"sumResistor", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"numberCurrent", " ", "=", " ", "0"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"sumCurrent", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"newParallel", " ", "=", " ", 
+      RowBox[{"{", "}"}]}], ";"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.858191556358753*^9, 
+  3.8581915566139593`*^9}},ExpressionUUID->"66f8b857-2f8d-4ea4-a433-\
+d062c42073a6"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.858191559809552*^9},ExpressionUUID->"c73a84f8-71f7-4957-8eb8-\
+2b6f43e1d87a"]
 },
 WindowSize->{1440., 777.75},
 WindowMargins->{{-6, Automatic}, {Automatic, -6}},
@@ -128,7 +140,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 2979, 74, 238, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
-Cell[3540, 96, 581, 14, 67, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"]
+Cell[3540, 96, 918, 21, 124, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
+Cell[4461, 119, 128, 3, 28, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"]
 }
 ]
 *)
