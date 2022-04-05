@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3137,         93]
-NotebookOptionsPosition[      2778,         79]
-NotebookOutlinePosition[      3184,         95]
-CellTagsIndexPosition[      3141,         92]
+NotebookDataLength[      8165,        221]
+NotebookOptionsPosition[      7617,        205]
+NotebookOutlinePosition[      8023,        221]
+CellTagsIndexPosition[      7980,        218]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -70,12 +70,138 @@ Cell[BoxData[
             RowBox[{"series", "[", 
              RowBox[{"[", 
               RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ";", 
-           RowBox[{"numberVoltage", "++"}]}]}], "]"}]}]}], "]"}], 
-     ";"}]}]}]}]], "Input",
+           RowBox[{"numberVoltage", "++"}]}]}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"numberVoltage", " ", ">", " ", "0"}], ",", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"newSeries", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<voltage\>\"", ",", "sumVoltage"}], "}"}]}], "]"}]}], 
+      "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"numberResistors", " ", ">", " ", "0"}], ",", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"newSeries", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<resistor\>\"", ",", "sumResistor"}], "}"}]}], "]"}]}], 
+      "]"}], ";", "\[IndentingNewLine]", "newSeries"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{{3.85819132106357*^9, 3.8581913214939623`*^9}, {
-  3.8581913523872232`*^9, 
-  3.858191378546092*^9}},ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-\
-609d84d9176e"]
+  3.8581913523872232`*^9, 3.858191378546092*^9}, {3.8581914664343386`*^9, 
+  3.8581914676793528`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"parallelResistorReduction", "[", "parallel_", "]"}], ":=", " ", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "newParallel", ",", " ", "sumResistor", ",", "sumCurrent", ",", " ", 
+      "numberCurrent", ",", " ", "numberResistors", ",", "i"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"numberResistors", " ", "=", " ", "0"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"sumResistor", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"numberCurrent", " ", "=", " ", "0"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"sumCurrent", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"newParallel", " ", "=", " ", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{"i", "<=", 
+        RowBox[{"Length", "[", "parallel", "]"}]}], ",", 
+       RowBox[{"i", "++"}], ",", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"parallel", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", 
+           "\"\<resistor\>\""}], ",", " ", 
+          RowBox[{
+           RowBox[{"sumResistor", " ", "+=", " ", 
+            RowBox[{"1", "/", 
+             RowBox[{"parallel", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", ",", "2"}], "]"}], "]"}]}]}], ";", 
+           RowBox[{"numberResistors", "++"}]}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"parallel", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", "\"\<current\>\""}],
+           ",", " ", 
+          RowBox[{
+           RowBox[{"sumCurrent", " ", "+=", " ", 
+            RowBox[{"parallel", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ";", 
+           RowBox[{"numberCurrent", "++"}]}]}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", " ", "1"}], ",", " ", 
+       RowBox[{"i", "<=", " ", 
+        RowBox[{"Length", "[", "parallel", "]"}]}], ",", 
+       RowBox[{"i", "++"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"And", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"parallel", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "1"}], "]"}], "]"}], "!=", 
+            "\"\<resistor\>\""}], ",", "  ", 
+           RowBox[{
+            RowBox[{"parallel", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "1"}], "]"}], "]"}], "!=", 
+            "\"\<current\>\""}]}], "]"}], " ", ",", " ", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"newParallel", ",", 
+           RowBox[{"parallel", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"numberCurrent", " ", ">", " ", "0"}], ",", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"newParallel", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<current\>\"", ",", "sumCurrent"}], "}"}]}], "]"}]}], 
+      "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"numberResistors", " ", ">", " ", "0"}], ",", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"newParallel", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<resistor\>\"", ",", 
+           RowBox[{"sumResistor", "^", 
+            RowBox[{"-", "1"}]}]}], "}"}]}], "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", "newParallel"}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.858191556358753*^9, 3.8581915566139593`*^9}, {
+  3.8581915957368326`*^9, 
+  3.8581916232778683`*^9}},ExpressionUUID->"66f8b857-2f8d-4ea4-a433-\
+d062c42073a6"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.858191559809552*^9},ExpressionUUID->"c73a84f8-71f7-4957-8eb8-\
+2b6f43e1d87a"]
 },
 WindowSize->{1440., 777.75},
 WindowMargins->{{-6, Automatic}, {Automatic, -6}},
@@ -94,7 +220,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2216, 57, 181, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"]
+Cell[558, 20, 2979, 74, 238, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
+Cell[3540, 96, 3942, 102, 257, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
+Cell[7485, 200, 128, 3, 28, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"]
 }
 ]
 *)
