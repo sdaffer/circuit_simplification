@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1887,         58]
-NotebookOptionsPosition[      1529,         44]
-NotebookOutlinePosition[      1935,         60]
-CellTagsIndexPosition[      1892,         57]
+NotebookDataLength[      3137,         93]
+NotebookOptionsPosition[      2778,         79]
+NotebookOutlinePosition[      3184,         95]
+CellTagsIndexPosition[      3141,         92]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,10 +36,45 @@ Cell[BoxData[
      "\[IndentingNewLine]", 
      RowBox[{"sumVoltage", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
      RowBox[{"newSeries", " ", "=", " ", 
-      RowBox[{"{", "}"}]}], ";"}]}]}]}]], "Input",
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{"i", "<=", 
+        RowBox[{"Length", "[", "series", "]"}]}], ",", 
+       RowBox[{"i", "++"}], ",", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"series", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", 
+           "\"\<resistor\>\""}], ",", " ", 
+          RowBox[{
+           RowBox[{"sumResistor", " ", "+=", " ", 
+            RowBox[{"series", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ";", 
+           RowBox[{"numberResistors", "++"}]}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"series", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", "\"\<voltage\>\""}],
+           ",", " ", 
+          RowBox[{
+           RowBox[{"sumVoltage", " ", "+=", " ", 
+            RowBox[{"series", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ";", 
+           RowBox[{"numberVoltage", "++"}]}]}], "]"}]}]}], "]"}], 
+     ";"}]}]}]}]], "Input",
  CellChangeTimes->{{3.85819132106357*^9, 3.8581913214939623`*^9}, {
   3.8581913523872232`*^9, 
-  3.8581913528916907`*^9}},ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-\
+  3.858191378546092*^9}},ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-\
 609d84d9176e"]
 },
 WindowSize->{1440., 777.75},
@@ -59,7 +94,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 967, 22, 124, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"]
+Cell[558, 20, 2216, 57, 181, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"]
 }
 ]
 *)
