@@ -1,0 +1,7 @@
+1. Write function for handling resistors in series
+2. Write function for handling restors in parallel
+3. Write function for overall circuit handler
+4. Test basic cases and cross-check with LTspice
+5. Create several edge test cases and cross-check with LTspice
+6. Plan and record presentation
+7. Write final report
