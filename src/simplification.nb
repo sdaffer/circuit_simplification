@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9290,        251]
-NotebookOptionsPosition[      8646,        234]
-NotebookOutlinePosition[      9052,        250]
-CellTagsIndexPosition[      9009,        247]
+NotebookDataLength[     11972,        322]
+NotebookOptionsPosition[     11196,        302]
+NotebookOutlinePosition[     11602,        318]
+CellTagsIndexPosition[     11559,        315]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -72,6 +72,31 @@ Cell[BoxData[
               RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ";", 
            RowBox[{"numberVoltage", "++"}]}]}], "]"}]}]}], "]"}], ";", 
      "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", " ", "1"}], ",", " ", 
+       RowBox[{"i", "<=", " ", 
+        RowBox[{"Length", "[", "series", "]"}]}], ",", 
+       RowBox[{"i", "++"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"And", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"series", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "1"}], "]"}], "]"}], "!=", 
+            "\"\<resistor\>\""}], ",", " ", 
+           RowBox[{
+            RowBox[{"series", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "1"}], "]"}], "]"}], "!=", 
+            "\"\<voltage\>\""}]}], "]"}], ",", " ", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"newSeries", ",", 
+           RowBox[{"series", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
       RowBox[{
        RowBox[{"numberVoltage", " ", ">", " ", "0"}], ",", 
@@ -90,9 +115,9 @@ Cell[BoxData[
       "]"}], ";", "\[IndentingNewLine]", "newSeries"}]}], 
    "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{{3.85819132106357*^9, 3.8581913214939623`*^9}, {
-  3.8581913523872232`*^9, 3.858191378546092*^9}, {3.8581914664343386`*^9, 
-  3.8581914676793528`*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
+   3.8581913523872232`*^9, 3.858191378546092*^9}, {3.8581914664343386`*^9, 
+   3.8581914676793528`*^9}, 3.858191754562014*^9},
+ CellLabel->"In[10]:=",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
 
 Cell[BoxData[
  RowBox[{
@@ -194,9 +219,8 @@ Cell[BoxData[
      "\[IndentingNewLine]", "newParallel"}]}], "\[IndentingNewLine]", 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.858191556358753*^9, 3.8581915566139593`*^9}, {
-  3.8581915957368326`*^9, 
-  3.8581916232778683`*^9}},ExpressionUUID->"66f8b857-2f8d-4ea4-a433-\
-d062c42073a6"],
+   3.8581915957368326`*^9, 3.8581916232778683`*^9}, 3.85819171668748*^9},
+ CellLabel->"In[4]:=",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
 
 Cell[BoxData[
  RowBox[{
@@ -225,12 +249,56 @@ Cell[BoxData[
        RowBox[{"finalCircuit", "=", 
         RowBox[{"parallelResistorReduction", "[", "circuit", "]"}]}]}], "]"}],
       ";", "\[IndentingNewLine]", "finalCircuit"}]}], "\[IndentingNewLine]", 
-   "]"}]}]], "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
+   "]"}]}]], "Input",
+ CellChangeTimes->{3.858191718244115*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
 
-Cell[BoxData[""], "Input",
- CellChangeTimes->{
-  3.858191559809552*^9},ExpressionUUID->"c73a84f8-71f7-4957-8eb8-\
-2b6f43e1d87a"]
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"circuit1", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<series\>\"", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<voltage\>\"", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "1000"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "30"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "200"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<voltage\>\"", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<voltage\>\"", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "80"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "500"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<voltage\>\"", ",", "5"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"circuitHandler", "[", "circuit1", "]"}]}], "Input",
+ CellChangeTimes->{3.858191559809552*^9, 3.858191710422124*^9},
+ CellLabel->"In[11]:=",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"series\"\>", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"voltage\"\>", ",", "19"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"resistor\"\>", ",", "1820"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.858191712121673*^9, 3.858191758596682*^9}},
+ CellLabel->"Out[12]=",ExpressionUUID->"6396d2b7-9296-4447-97fd-6550271011d3"]
+}, Open  ]]
 },
 WindowSize->{1440., 777.75},
 WindowMargins->{{-6, Automatic}, {Automatic, -6}},
@@ -249,10 +317,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2979, 74, 238, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
-Cell[3540, 96, 3942, 102, 257, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
-Cell[7485, 200, 1026, 27, 105, "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
-Cell[8514, 229, 128, 3, 28, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"]
+Cell[558, 20, 3905, 99, 257, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
+Cell[4466, 121, 3982, 101, 257, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
+Cell[8451, 224, 1091, 29, 105, "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
+Cell[CellGroupData[{
+Cell[9567, 257, 1189, 30, 67, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
+Cell[10759, 289, 421, 10, 81, "Output",ExpressionUUID->"6396d2b7-9296-4447-97fd-6550271011d3"]
+}, Open  ]]
 }
 ]
 *)
