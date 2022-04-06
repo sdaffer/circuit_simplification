@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11972,        322]
-NotebookOptionsPosition[     11196,        302]
-NotebookOutlinePosition[     11602,        318]
-CellTagsIndexPosition[     11559,        315]
+NotebookDataLength[     12227,        328]
+NotebookOptionsPosition[     11355,        307]
+NotebookOutlinePosition[     11764,        323]
+CellTagsIndexPosition[     11721,        320]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -222,6 +222,11 @@ Cell[BoxData[
    3.8581915957368326`*^9, 3.8581916232778683`*^9}, 3.85819171668748*^9},
  CellLabel->"In[4]:=",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
 
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8581918878472214`*^9, 
+  3.8581919632686906`*^9}},ExpressionUUID->"40df2b37-c475-47cc-8dca-\
+a4fffff8a2aa"],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"circuitHandler", "[", "circuit_", "]"}], ":=", 
@@ -300,8 +305,8 @@ Cell[BoxData[
  CellLabel->"Out[12]=",ExpressionUUID->"6396d2b7-9296-4447-97fd-6550271011d3"]
 }, Open  ]]
 },
-WindowSize->{1440., 777.75},
-WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+WindowSize->{1920., 1047.75},
+WindowMargins->{{1434, Automatic}, {Automatic, -6}},
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"63a6c09c-af0f-4f16-8d4b-3478cc0a77d6"
@@ -319,10 +324,11 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 3905, 99, 257, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
 Cell[4466, 121, 3982, 101, 257, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
-Cell[8451, 224, 1091, 29, 105, "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
+Cell[8451, 224, 156, 3, 28, "Input",ExpressionUUID->"40df2b37-c475-47cc-8dca-a4fffff8a2aa"],
+Cell[8610, 229, 1091, 29, 105, "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
 Cell[CellGroupData[{
-Cell[9567, 257, 1189, 30, 67, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
-Cell[10759, 289, 421, 10, 81, "Output",ExpressionUUID->"6396d2b7-9296-4447-97fd-6550271011d3"]
+Cell[9726, 262, 1189, 30, 48, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
+Cell[10918, 294, 421, 10, 32, "Output",ExpressionUUID->"6396d2b7-9296-4447-97fd-6550271011d3"]
 }, Open  ]]
 }
 ]
