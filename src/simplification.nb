@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14578,        391]
-NotebookOptionsPosition[     13692,        370]
-NotebookOutlinePosition[     14111,        386]
-CellTagsIndexPosition[     14068,        383]
+NotebookDataLength[     15462,        409]
+NotebookOptionsPosition[     14489,        387]
+NotebookOutlinePosition[     14898,        403]
+CellTagsIndexPosition[     14855,        400]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -228,28 +228,26 @@ Cell[BoxData[
   RowBox[{"Module", "[", 
    RowBox[{
     RowBox[{"{", "finalCircuit", "}"}], ",", "\[IndentingNewLine]", 
-    RowBox[{"parallelResistorReduction", "[", 
-     RowBox[{"{", 
+    RowBox[{
+     RowBox[{"finalCircuit", " ", "=", " ", 
+      RowBox[{"parallelResistorReduction", "[", "circuit", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"finalCircuit", "[", 
+       RowBox[{"[", 
+        RowBox[{"2", ",", "2"}], "]"}], "]"}], "=", 
       RowBox[{
-       RowBox[{"{", 
-        RowBox[{"\"\<parallel\>\"", ",", "0"}], "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"\"\<voltage\>\"", ",", 
-         RowBox[{
-          RowBox[{"circuit", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", "2"}], "]"}], "]"}], "*", " ", 
-          RowBox[{"circuit", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", "2"}], "]"}], "]"}]}]}], "}"}], ",", " ", 
-       RowBox[{"{", 
-        RowBox[{"\"\<resistor\>\"", ",", " ", 
-         RowBox[{"circuit", "[", 
-          RowBox[{"[", 
-           RowBox[{"3", ",", "2"}], "]"}], "]"}]}], "}"}]}], "}"}], "]"}]}], 
-   "\[IndentingNewLine]", "]"}]}]], "Input",
- CellChangeTimes->{{3.8581919913326783`*^9, 3.858192013861953*^9}},
- CellLabel->"In[14]:=",ExpressionUUID->"3ab983c1-8e5c-441c-b946-a2aeb51e5807"],
+       RowBox[{"finalCircuit", "[", 
+        RowBox[{"[", 
+         RowBox[{"2", ",", "2"}], "]"}], "]"}], "*", " ", 
+       RowBox[{"finalCircuit", "[", 
+        RowBox[{"[", 
+         RowBox[{"3", ",", "2"}], "]"}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", "finalCircuit"}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.8581919913326783`*^9, 3.858192013861953*^9}, {
+  3.8581923913091993`*^9, 3.858192445449587*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"3ab983c1-8e5c-441c-b946-a2aeb51e5807"],
 
 Cell[BoxData[
  RowBox[{
@@ -349,10 +347,12 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"\"\<resistor\>\"", ",", "200"}], "}"}]}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
- RowBox[{"circuitHandler", "[", "circuit1", "]"}]}], "Input",
- CellChangeTimes->{3.858191559809552*^9, 3.858191710422124*^9, 
-  3.858192133388166*^9},ExpressionUUID->"c73a84f8-71f7-4957-8eb8-\
-2b6f43e1d87a"],
+ RowBox[{"circuitHandler", "[", "circuit1", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"circuitHandler", "[", "circuit2", "]"}]}], "Input",
+ CellChangeTimes->{
+  3.858191559809552*^9, 3.858191710422124*^9, 3.858192133388166*^9, {
+   3.8581922890599403`*^9, 3.8581922962487698`*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -364,13 +364,30 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{"\<\"resistor\"\>", ",", "1820"}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.858191712121673*^9, 3.858191758596682*^9}, 
-   3.858192024326234*^9},
- CellLabel->"Out[17]=",ExpressionUUID->"ba610d1d-ee5e-410b-b5f7-2f1d7c26f8d1"]
+   3.858192024326234*^9, {3.8581922855259748`*^9, 3.8581922969674244`*^9}, {
+   3.8581924389224043`*^9, 3.8581924539450445`*^9}},
+ CellLabel->"Out[37]=",ExpressionUUID->"ac7b25fc-18ea-45c3-948e-6f95243f9be0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"parallel\"\>", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"current\"\>", ",", 
+     FractionBox["60200", "111"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"resistor\"\>", ",", 
+     FractionBox["1400", "111"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.858191712121673*^9, 3.858191758596682*^9}, 
+   3.858192024326234*^9, {3.8581922855259748`*^9, 3.8581922969674244`*^9}, {
+   3.8581924389224043`*^9, 3.858192453949048*^9}},
+ CellLabel->"Out[38]=",ExpressionUUID->"4c6d57fc-c0bf-4ba7-af7b-318c90ae43d6"]
 }, Open  ]]
 },
-WindowSize->{1410.612244897959, 739.8367346938775},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
-FrontEndVersion->"13.0 for Linux x86 (64-bit) (February 4, 2022)",
+WindowSize->{1920., 1047.75},
+WindowMargins->{{1434, Automatic}, {Automatic, -6}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"63a6c09c-af0f-4f16-8d4b-3478cc0a77d6"
 ]
@@ -385,13 +402,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3905, 99, 272, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
-Cell[4466, 121, 3982, 101, 272, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
-Cell[8451, 224, 1081, 27, 70, "Input",ExpressionUUID->"3ab983c1-8e5c-441c-b946-a2aeb51e5807"],
-Cell[9535, 253, 1132, 30, 110, "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
+Cell[558, 20, 3905, 99, 257, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
+Cell[4466, 121, 3982, 101, 257, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
+Cell[8451, 224, 1014, 25, 105, "Input",ExpressionUUID->"3ab983c1-8e5c-441c-b946-a2aeb51e5807"],
+Cell[9468, 251, 1132, 30, 105, "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
 Cell[CellGroupData[{
-Cell[10692, 287, 2534, 67, 110, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
-Cell[13229, 356, 447, 11, 33, "Output",ExpressionUUID->"ba610d1d-ee5e-410b-b5f7-2f1d7c26f8d1"]
+Cell[10625, 285, 2685, 69, 105, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
+Cell[13313, 356, 551, 12, 32, "Output",ExpressionUUID->"ac7b25fc-18ea-45c3-948e-6f95243f9be0"],
+Cell[13867, 370, 606, 14, 48, "Output",ExpressionUUID->"4c6d57fc-c0bf-4ba7-af7b-318c90ae43d6"]
 }, Open  ]]
 }
 ]
