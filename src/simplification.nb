@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13222,        354]
-NotebookOptionsPosition[     12347,        333]
-NotebookOutlinePosition[     12756,        349]
-CellTagsIndexPosition[     12713,        346]
+NotebookDataLength[     14578,        391]
+NotebookOptionsPosition[     13692,        370]
+NotebookOutlinePosition[     14111,        386]
+CellTagsIndexPosition[     14068,        383]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -311,11 +311,48 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"\"\<resistor\>\"", ",", "500"}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"\"\<voltage\>\"", ",", "5"}], "}"}]}], "}"}]}], 
+      RowBox[{"\"\<voltage\>\"", ",", "5"}], "}"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"circuit2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<parallel\>\"", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "100"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<current\>\"", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "200"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<current\>\"", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "100"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<current\>\"", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "50"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<current\>\"", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "100"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<current\>\"", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "70"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<current\>\"", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "200"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<current\>\"", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<resistor\>\"", ",", "200"}], "}"}]}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"circuitHandler", "[", "circuit1", "]"}]}], "Input",
- CellChangeTimes->{3.858191559809552*^9, 3.858191710422124*^9},
- CellLabel->"In[16]:=",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
+ CellChangeTimes->{3.858191559809552*^9, 3.858191710422124*^9, 
+  3.858192133388166*^9},ExpressionUUID->"c73a84f8-71f7-4957-8eb8-\
+2b6f43e1d87a"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -331,9 +368,9 @@ Cell[BoxData[
  CellLabel->"Out[17]=",ExpressionUUID->"ba610d1d-ee5e-410b-b5f7-2f1d7c26f8d1"]
 }, Open  ]]
 },
-WindowSize->{1920., 1047.75},
-WindowMargins->{{1434, Automatic}, {Automatic, -6}},
-FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+WindowSize->{1410.612244897959, 739.8367346938775},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"13.0 for Linux x86 (64-bit) (February 4, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"63a6c09c-af0f-4f16-8d4b-3478cc0a77d6"
 ]
@@ -348,13 +385,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3905, 99, 257, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
-Cell[4466, 121, 3982, 101, 257, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
-Cell[8451, 224, 1081, 27, 67, "Input",ExpressionUUID->"3ab983c1-8e5c-441c-b946-a2aeb51e5807"],
-Cell[9535, 253, 1132, 30, 105, "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
+Cell[558, 20, 3905, 99, 272, "Input",ExpressionUUID->"c80bd22a-b6fb-4a7c-99c4-609d84d9176e"],
+Cell[4466, 121, 3982, 101, 272, "Input",ExpressionUUID->"66f8b857-2f8d-4ea4-a433-d062c42073a6"],
+Cell[8451, 224, 1081, 27, 70, "Input",ExpressionUUID->"3ab983c1-8e5c-441c-b946-a2aeb51e5807"],
+Cell[9535, 253, 1132, 30, 110, "Input",ExpressionUUID->"1d649d74-b4d7-4bf2-9b9e-b2739bb5f252"],
 Cell[CellGroupData[{
-Cell[10692, 287, 1189, 30, 48, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
-Cell[11884, 319, 447, 11, 32, "Output",ExpressionUUID->"ba610d1d-ee5e-410b-b5f7-2f1d7c26f8d1"]
+Cell[10692, 287, 2534, 67, 110, "Input",ExpressionUUID->"c73a84f8-71f7-4957-8eb8-2b6f43e1d87a"],
+Cell[13229, 356, 447, 11, 33, "Output",ExpressionUUID->"ba610d1d-ee5e-410b-b5f7-2f1d7c26f8d1"]
 }, Open  ]]
 }
 ]
